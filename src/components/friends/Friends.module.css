@@ -1,0 +1,37 @@
+.item {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.status {
+  margin-left: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.avatar {
+  margin-left: 15px;
+  width: 60px;
+
+  border-radius: 5px;
+  background-color: brown;
+}
+
+.name {
+  margin-left: 15px;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 25px;
+}
