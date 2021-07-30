@@ -11,15 +11,17 @@ function StatisticsList({ stats, title }) {
     <section className={s.statistics}>
       <h2 className={s.title}>{title}</h2>
       <ul className={s.itemContainer}>
-        {stats.map(stat => (
-          <li
-            className={s.item}
-            style={{ backgroundColor: randomColor() }}
-            key={stat.id}
-          >
-            <Statistics label={stat.label} percentage={stat.percentage} />
-          </li>
-        ))}
+        {stats.map(function ({ id, label, percentage }) {
+          return (
+            <li
+              className={s.item}
+              style={{ backgroundColor: randomColor() }}
+              key={id}
+            >
+              <Statistics label={label} percentage={percentage} />
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

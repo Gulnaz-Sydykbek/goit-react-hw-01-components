@@ -4,15 +4,13 @@ import Friends from './Friends';
 function FriendList({ friends }) {
   return (
     <div>
-      {friends.map(friend => (
-        <ul key={friend.id}>
-          <Friends
-            url={friend.avatar}
-            name={friend.name}
-            isOnline={friend.isOnline}
-          />
-        </ul>
-      ))}
+      {friends.map(function ({ id, avatar, name, isOnline }) {
+        return (
+          <ul key={id}>
+            <Friends url={avatar} name={name} isOnline={isOnline} />
+          </ul>
+        );
+      })}
     </div>
   );
 }

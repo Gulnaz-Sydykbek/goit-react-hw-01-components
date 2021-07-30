@@ -2,15 +2,7 @@ import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 
 function Profile(props) {
-  const {
-    name = 'Heaven knows',
-    tag,
-    location,
-    avatar,
-    followers,
-    views,
-    likes,
-  } = props;
+  const { name = 'Heaven knows', tag, location, avatar, stats } = props;
 
   return (
     <div className={s.profile}>
@@ -24,15 +16,15 @@ function Profile(props) {
       <ul className={s.stats}>
         <li className={s.statsContainer}>
           <span>Followers</span>
-          <span className={s.quantity}>{followers}</span>
+          <span className={s.quantity}>{stats.followers}</span>
         </li>
         <li className={s.statsContainer}>
           <span>Views</span>
-          <span className={s.quantity}>{views}</span>
+          <span className={s.quantity}>{stats.views}</span>
         </li>
         <li className={s.statsContainer}>
           <span>Likes</span>
-          <span className={s.quantity}>{likes}</span>
+          <span className={s.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -44,9 +36,11 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
 
 export default Profile;

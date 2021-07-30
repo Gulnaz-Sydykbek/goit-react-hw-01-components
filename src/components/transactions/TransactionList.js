@@ -13,15 +13,17 @@ function TransactionList({ items }) {
         </tr>
       </thead>
 
-      {items.map(item => (
-        <tbody className={s.container} key={item.id}>
-          <TransactionHistory
-            type={item.type}
-            amount={item.amount}
-            currency={item.currency}
-          />
-        </tbody>
-      ))}
+      {items.map(function ({ id, type, amount, currency }) {
+        return (
+          <tbody className={s.container} key={id}>
+            <TransactionHistory
+              type={type}
+              amount={amount}
+              currency={currency}
+            />
+          </tbody>
+        );
+      })}
     </table>
   );
 }
