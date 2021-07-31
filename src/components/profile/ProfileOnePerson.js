@@ -1,4 +1,4 @@
-import Profile from './Profile';
+/*import Profile from './Profile';
 
 function ProfileOnePerson({ user }) {
   return (
@@ -14,4 +14,4 @@ function ProfileOnePerson({ user }) {
   );
 }
 
-export default ProfileOnePerson;
+export default ProfileOnePerson;*/
