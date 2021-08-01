@@ -10,10 +10,13 @@ import friends from '../data/friends.json';
 import TransactionList from './transactions/TransactionList';
 import transactions from '../data/transactions.json';
 
+import Container from './container/Container';
+
 function App() {
   const { name, tag, location, avatar, stats } = user;
+
   return (
-    <div>
+    <Container>
       <Profile
         name={name}
         tag={tag}
@@ -24,7 +27,7 @@ function App() {
       <StatisticsList title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionList items={transactions} />
-    </div>
+    </Container>
   );
 }
 

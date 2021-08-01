@@ -17,6 +17,7 @@ function TransactionList({ items }) {
         return (
           <tbody className={s.container} key={id}>
             <TransactionHistory
+              key={id}
               type={type}
               amount={amount}
               currency={currency}
